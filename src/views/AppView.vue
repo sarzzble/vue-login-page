@@ -5,6 +5,7 @@
         <h1>Welcome, {{ userName }}</h1>
 
         <button
+          id="logout-btn"
           @click="handleLogout"
           class="bg-gray-800 text-white p-4 rounded-lg cursor-pointer hover:bg-gray-700"
         >

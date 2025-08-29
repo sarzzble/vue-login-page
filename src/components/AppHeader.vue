@@ -17,6 +17,7 @@
 
       <div>
         <button
+          id="logout-btn"
           @click="logout()"
           class="bg-red-500 text-white p-2 rounded cursor-pointer hover:bg-red-600"
         >
