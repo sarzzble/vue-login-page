@@ -3,6 +3,7 @@
     <div class="flex items-center justify-center gap-4">
       <router-link to="/" class="text-white">Home</router-link>
       <router-link to="/app" class="text-white ml-4">App</router-link>
+      <router-link to="/encryption" class="text-white ml-4">Encryption</router-link>
     </div>
     <div class="flex items-center justify-center gap-4">
       <select
