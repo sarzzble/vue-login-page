@@ -44,6 +44,7 @@
           <VueTurnstile :site-key="siteKey" v-model="token" />
 
           <button
+            id="loginButton"
             type="submit"
             class="bg-blue-500 text-white rounded p-2 cursor-pointer hover:bg-blue-600 mb-2"
           >
