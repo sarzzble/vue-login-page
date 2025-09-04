@@ -2,25 +2,12 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createI18n } from 'vue-i18n'
 
 import App from './App.vue'
 import router from './router'
 import vue3GoogleLogin from 'vue3-google-login'
 
-const i18n = createI18n({
-  legacy: false, // Composition API mode
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages: {
-    en: {
-      specialText: 'This is some special text',
-    },
-    fr: {
-      specialText: 'Ceci est un texte spécial',
-    },
-  },
-})
+import i18n from './lib/i18n'
 
 const app = createApp(App)
 

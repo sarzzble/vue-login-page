@@ -2,14 +2,14 @@
   <div>
     <CardUI>
       <div class="flex flex-col items-center justify-center gap-4">
-        <h1>Welcome, {{ userName }}</h1>
+        <h1>{{ t('app.welcome') }}, {{ userName }}</h1>
 
         <button
           id="logout-btn"
           @click="handleLogout"
           class="bg-gray-800 text-white p-4 rounded-lg cursor-pointer hover:bg-gray-700"
         >
-          Logout
+          {{ t('header.logout') }}
         </button>
       </div>
     </CardUI>
@@ -22,6 +22,7 @@ import router from '@/router'
 import { useAuthStore } from '@/stores/auth'
 
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const userName = ref('')
 
@@ -30,6 +31,8 @@ userName.value =
 
 const store = useAuthStore()
 const { logout } = store
+
+const { t } = useI18n()
 
 const handleLogout = () => {
   logout()

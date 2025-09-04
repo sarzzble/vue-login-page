@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col items-center justify-center gap-4">
-      <h1 class="font-bold text-2xl">Encryption</h1>
+      <h1 class="font-bold text-2xl">{{ t('encryption.title') }}</h1>
 
       <div class="flex flex-col items-center justify-center gap-4">
         <div class="flex items-center justify-center gap-4">
@@ -10,7 +10,7 @@
             type="text"
             v-model="textToEncrypt"
             class="border border-gray-300 p-2 rounded"
-            placeholder="Enter text to encrypt"
+            :placeholder="t('encryption.placeholder')"
           />
 
           <select
@@ -28,19 +28,19 @@
             @click="encryptText"
             class="bg-blue-500 text-white p-2 rounded cursor-pointer hover:bg-blue-600"
           >
-            Encrypt
+            {{ t('encryption.encrypt') }}
           </button>
         </div>
 
         <div>
-          <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
+          <p v-if="errorMessage" class="text-red-500">{{ t('encryption.error') }}</p>
         </div>
       </div>
 
-      <div class="flex flex-col items-center justify-center mt-4 gap-2">
-        <h2 class="font-bold text-xl">Encrypted Text</h2>
+      <div v-if="encrypted" class="flex flex-col items-center justify-center mt-4 gap-2">
+        <h2 class="font-bold text-xl">{{ t('encryption.resultTitle') }}</h2>
 
-        <div v-if="encrypted" class="flex items-center justify-center gap-4">
+        <div class="flex items-center justify-center gap-4">
           <p id="encryptedText">{{ encrypted }}</p>
           <div class="relative inline-block">
             <button
@@ -58,7 +58,7 @@
               v-if="disable"
               class="absolute -top-3 -right-17.5 bg-gray-400 text-gray-700 px-2 py-1 rounded-lg shadow text-xs font-light z-10"
             >
-              Copied
+              {{ t('encryption.copied') }}
             </span>
           </div>
         </div>
@@ -71,11 +71,14 @@
 import { ref } from 'vue'
 import { SHA256, AES, DES } from 'crypto-js/'
 import CopyIcon from '@/components/svg/CopyIcon.vue'
+import { useI18n } from 'vue-i18n'
 
 const textToEncrypt = ref('')
 const encrypted = ref('')
 const errorMessage = ref('')
 const selectedAlgorithm = ref('crypto-js/sha256')
+
+const { t } = useI18n()
 
 function encryptText() {
   if (textToEncrypt.value) {
@@ -91,7 +94,7 @@ function encryptText() {
 
     textToEncrypt.value = ''
   } else {
-    errorMessage.value = 'Please enter text to encrypt.'
+    errorMessage.value = 'error'
   }
 }
 

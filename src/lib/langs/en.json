@@ -1,0 +1,38 @@
+{
+  "home": {
+    "title": "Welcome to the Home Page!",
+    "description": "This is your starting point. Enjoy exploring the app.",
+    "featuresTitle": "Highlights",
+    "infoTitle": "Information",
+    "infoText": "This project is a multilingual and secure login page example built with modern Vue.js.",
+    "features": ["Fast login", "Secure encryption", "User-friendly interface"]
+  },
+  "header": {
+    "language": "Language",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "nav": {
+    "home": "Home",
+    "app": "App",
+    "encryption": "Encryption"
+  },
+  "app": {
+    "welcome": "Welcome"
+  },
+  "encryption": {
+    "title": "Encryption",
+    "placeholder": "Enter text to encrypt",
+    "encrypt": "Encrypt",
+    "error": "Please enter text to encrypt.",
+    "resultTitle": "Encrypted Text",
+    "copied": "Copied"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "invalid": "Invalid email or password",
+    "submit": "Login"
+  }
+}

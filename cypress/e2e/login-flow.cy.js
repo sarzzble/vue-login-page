@@ -1,3 +1,5 @@
+/* global describe, it, cy, expect, beforeEach */
+
 describe('Login Flow', () => {
   beforeEach(() => {
     cy.visit('http://192.168.1.50:5173/')

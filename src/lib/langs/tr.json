@@ -1,0 +1,38 @@
+{
+  "home": {
+    "title": "Ana Sayfaya Hoş Geldiniz!",
+    "description": "Burası başlangıç noktanız. Uygulamayı keşfetmenin keyfini çıkarın.",
+    "featuresTitle": "Öne Çıkanlar",
+    "infoTitle": "Bilgi",
+    "infoText": "Bu proje, modern Vue.js ile çok dilli ve güvenli bir giriş sayfası örneğidir.",
+    "features": ["Hızlı giriş", "Güvenli şifreleme", "Kullanıcı dostu arayüz"]
+  },
+  "header": {
+    "language": "Dil",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "app": "Uygulama",
+    "encryption": "Şifreleme"
+  },
+  "app": {
+    "welcome": "Hoş geldin"
+  },
+  "encryption": {
+    "title": "Şifreleme",
+    "placeholder": "Şifrelenecek metni girin",
+    "encrypt": "Şifrele",
+    "error": "Lütfen şifrelenecek metni giriniz.",
+    "resultTitle": "Şifrelenmiş Metin",
+    "copied": "Kopyalandı"
+  },
+  "login": {
+    "title": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "invalid": "Geçersiz e-posta veya şifre",
+    "submit": "Giriş Yap"
+  }
+}
