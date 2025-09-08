@@ -10,22 +10,30 @@
   "header": {
     "language": "Dil",
     "login": "Giriş Yap",
-    "logout": "Çıkış Yap"
+    "logout": "Çıkış Yap",
+    "themeLight": "Açık",
+    "themeDark": "Koyu"
   },
   "nav": {
     "home": "Ana Sayfa",
     "app": "Uygulama",
-    "encryption": "Şifreleme"
+    "encryption": "Şifreleme & Şifre Çözme"
   },
   "app": {
     "welcome": "Hoş geldin"
   },
   "encryption": {
-    "title": "Şifreleme",
+    "title": "Şifreleme & Şifre Çözme",
     "placeholder": "Şifrelenecek metni girin",
     "encrypt": "Şifrele",
+    "decrypt": "Şifreyi Çöz",
+    "modeEncrypt": "Şifrele",
+    "modeDecrypt": "Şifre Çöz",
+    "keyPlaceholder": "AES/DES için anahtar girin",
     "error": "Lütfen şifrelenecek metni giriniz.",
     "resultTitle": "Şifrelenmiş Metin",
+    "decryptResultTitle": "Çözülen Metin",
+    "sha256Warning": "SHA-256 tek yönlüdür ve geri döndürülemez.",
     "copied": "Kopyalandı"
   },
   "login": {

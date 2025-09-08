@@ -10,22 +10,30 @@
   "header": {
     "language": "Language",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "themeLight": "Light",
+    "themeDark": "Dark"
   },
   "nav": {
     "home": "Home",
     "app": "App",
-    "encryption": "Encryption"
+    "encryption": "Encryption & Decryption"
   },
   "app": {
     "welcome": "Welcome"
   },
   "encryption": {
-    "title": "Encryption",
+    "title": "Encryption & Decryption",
     "placeholder": "Enter text to encrypt",
     "encrypt": "Encrypt",
+    "decrypt": "Decrypt",
+    "modeEncrypt": "Encrypt",
+    "modeDecrypt": "Decrypt",
+    "keyPlaceholder": "Enter key for AES/DES",
     "error": "Please enter text to encrypt.",
     "resultTitle": "Encrypted Text",
+    "decryptResultTitle": "Decrypted Text",
+    "sha256Warning": "SHA-256 is one-way and cannot be decrypted.",
     "copied": "Copied"
   },
   "login": {

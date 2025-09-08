@@ -19,3 +19,9 @@ app.use(vue3GoogleLogin, {
 })
 
 app.mount('#app')
+
+const savedTheme = localStorage.getItem('theme')
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+const theme = savedTheme || (prefersDark ? 'dark' : 'light')
+document.documentElement.classList.remove('theme-light', 'theme-dark')
+document.documentElement.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light')

@@ -31,6 +31,22 @@
         </button>
       </div>
 
+      <div class="flex items-center">
+        <button
+          type="button"
+          class="px-3 py-1.5 rounded bg-gray-700 hover:bg-gray-600 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer flex items-center justify-center"
+          @click="toggleTheme"
+          :title="currentTheme === 'dark' ? t('header.themeLight') : t('header.themeDark')"
+          aria-label="Toggle theme"
+        >
+          <i
+            :class="
+              currentTheme === 'dark' ? 'pi pi-sun text-yellow-300' : 'pi pi-moon text-blue-200'
+            "
+          ></i>
+        </button>
+      </div>
+
       <div>
         <button
           id="logout-btn"
@@ -47,6 +63,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth'
+import { ref, onMounted } from 'vue'
 
 const { locale, t } = useI18n()
 const { logout } = useAuthStore()
@@ -59,4 +76,36 @@ function setLocale(code) {
     console.error(e)
   }
 }
+
+const currentTheme = ref('light')
+
+function applyTheme(theme) {
+  currentTheme.value = theme
+  try {
+    localStorage.setItem('theme', theme)
+  } catch (e) {
+    console.error(e)
+  }
+  document.documentElement.classList.remove('theme-light', 'theme-dark')
+  document.documentElement.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light')
+}
+
+function toggleTheme() {
+  applyTheme(currentTheme.value === 'dark' ? 'light' : 'dark')
+}
+
+onMounted(() => {
+  try {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark' || saved === 'light') {
+      currentTheme.value = saved
+    } else {
+      const prefersDark =
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      currentTheme.value = prefersDark ? 'dark' : 'light'
+    }
+  } catch (e) {
+    console.error(e)
+  }
+})
 </script>
